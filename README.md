@@ -9,6 +9,7 @@ Jest to przygotowana przeze mnie pełna instrukcja instalacji Arch Linux z użyc
 - [Instalacja yay](#instalacja-yay)
 - [Usuwanie niepotrzebnych pakietów](#usuwanie-niepotrzebnych-pakietów)
 - [Instalowanie ZSH, OhMyZSH, powerlevel10k i dodatków](#instalowanie-zsh-ohmyzsh-powerlevel10k-i-dodatków)
+- [Optymalizacja pacman i yay](#optymalizacja-pacman-i-yay)
 - [Materiały pomocnicze](#materiały-pomocnicze)
 
 ## Opis skryptów
@@ -128,6 +129,42 @@ Skrypt instalujący ZSH z Oh My Zsh, Powerlevel10k i przydatnymi wtyczkami.
 - **systemd** - zarządzanie usługami systemd
 - **z** - szybkie przechodzenie do często używanych katalogów
 
+### optymalization.sh
+
+Skrypt automatyzujący optymalizację systemu dla laptopa Dell XPS 9333.
+
+#### Funkcje optymalizacji
+
+##### Zarządzanie energią
+- Instalacja i konfiguracja TLP, powertop i thermald
+- Kalibracja powertop
+- Automatyczna aktywacja usług
+
+##### Procesor
+- Optymalizacja parametrów GRUB (intel_pstate, pcie_aspm)
+- Instalacja i konfiguracja auto-cpufreq
+- Dostosowanie częstotliwości procesora
+
+##### Dysk
+- Aktywacja TRIM dla SSD
+- Optymalizacja zarządzania energią HDD
+- Konfiguracja opcji montowania (noatime)
+- Tworzenie reguł udev
+
+##### WiFi
+- Instalacja sterowników iwlwifi
+- Optymalizacja zarządzania energią
+- Konfiguracja parametrów modułu iwlwifi
+
+### installing_optymalization.sh
+Skrypt optymalizujący działanie pacman i yay w systemie Arch Linux.
+#### Funkcje:
+
+- Włącza kolorowe wyjście w pacman
+- Aktywuje animację PacMan podczas pobierania (ILoveCandy)
+- Konfiguruje równoległe pobieranie (do 5 plików)
+- Optymalizuje ustawienia yay (czyszczenie cache, usuwanie zależności kompilacji)
+
 ## Łączenie się z WiFi
 
 Jeżeli masz podpięty internet po kablu, możesz pominąć ten krok. W przeciwnym razie postępuj według poniższej instrukcji:
@@ -240,6 +277,38 @@ chmod +x zsh_install.sh
 3. Uruchom jako root:
 ```bash
 sudo ./zsh_install.sh p10k.zsh
+```
+
+## Optymalizacja systemu
+1. Pobierz skrypt:
+```bash
+curl -O https://raw.githubusercontent.com/mateusz-bogacz-collegiumwitelona/instrukcja_arch/main/optymalization.sh
+```
+
+2. Nadaj uprawnienia:
+```bash
+chmod +x optymalization.sh
+```
+
+3. Uruchom jako root:
+```bash
+sudo ./optymalization.sh
+```
+## Optymalizacja pacman i yay
+
+1. Pobierz skrypt optymalizacyjny:
+```bash
+curl -O https://raw.githubusercontent.com/user/repo/main/installing_optymalization.sh
+```
+
+2. Nadaj uprawnienia:
+```bash
+chmod +x installing_optymalization.sh
+```
+
+3. Uruchom:
+```bash
+sudo ./installing_optymalization.sh
 ```
 
 ## Materiały pomocnicze
