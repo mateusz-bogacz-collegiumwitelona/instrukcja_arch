@@ -48,7 +48,6 @@ fi
 
 # Lista pakietów do instalacji
 PACKAGES=(
-    'auto-cpufreq'
     'google-chrome'
     'intellij-idea-ultimate-edition'
     'phpstorm'

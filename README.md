@@ -68,10 +68,6 @@ Jest to przygotowana przeze mnie pełna instrukcja instalacji Arch Linux z użyc
   ```
   discord
   ```
-- **Narzędzia systemowe:**
-  ```
-  auto-cpufreq
-  ```
 
 #### Cechy skryptu
 - Kolorowe komunikaty statusu (success, error, info)
