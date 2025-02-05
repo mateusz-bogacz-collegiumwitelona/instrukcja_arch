@@ -76,6 +76,36 @@ Jest to przygotowana przeze mnie pełna instrukcja instalacji Arch Linux z użyc
 - Automatyczna aktualizacja systemu przed instalacją
 - Tworzenie dedykowanego katalogu na pakiety (~/paczki)
 
+### remove.sh
+
+Skrypt automatyzujący usuwanie domyślnych aplikacji GNOME z systemu Arch Linux.
+
+#### Funkcje bezpieczeństwa
+
+- Weryfikacja uprawnień roota
+- Sprawdzanie istnienia pakietów
+- Obsługa błędów usuwania
+
+### Usuwane pakiety
+
+```bash
+epiphany
+gnome-contacts
+gnome-maps
+totem
+malcontent
+gnome-tour
+gnome-user-docs
+gnome-weather
+```
+
+#### Cechy
+
+- Kolorowe komunikaty statusu (success, error, info)
+- Automatyczne usuwanie bez potwierdzenia (--noconfirm)
+- Usuwanie rekursywne z zależnościami (-Rns)
+- Weryfikacja pakietów przed usunięciem
+
 ## Łączenie się z WiFi
 
 Jeżeli masz podpięty internet po kablu, możesz pominąć ten krok. W przeciwnym razie postępuj według poniższej instrukcji:
