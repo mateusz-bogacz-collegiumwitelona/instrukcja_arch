@@ -108,7 +108,9 @@
         "firefox",
         "gparted",
         "libreoffice-still",
-        "neofetch"
+        "neofetch",
+        "curl",
+        "wget"
     ],
     "parallel downloads": 0,
     "profile_config": {
