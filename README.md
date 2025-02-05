@@ -10,6 +10,7 @@ Jest to przygotowana przeze mnie pełna instrukcja instalacji Arch Linux z użyc
 - [Usuwanie niepotrzebnych pakietów](#usuwanie-niepotrzebnych-pakietów)
 - [Instalowanie ZSH, OhMyZSH, powerlevel10k i dodatków](#instalowanie-zsh-ohmyzsh-powerlevel10k-i-dodatków)
 - [Optymalizacja pacman i yay](#optymalizacja-pacman-i-yay)
+- [Optymalizacja nano](#optymalizacja-nano)
 - [Materiały pomocnicze](#materiały-pomocnicze)
 
 ## Opis skryptów
@@ -159,11 +160,20 @@ Skrypt automatyzujący optymalizację systemu dla laptopa Dell XPS 9333.
 ### installing_optymalization.sh
 Skrypt optymalizujący działanie pacman i yay w systemie Arch Linux.
 #### Funkcje:
-
 - Włącza kolorowe wyjście w pacman
 - Aktywuje animację PacMan podczas pobierania (ILoveCandy)
 - Konfiguruje równoległe pobieranie (do 5 plików)
 - Optymalizuje ustawienia yay (czyszczenie cache, usuwanie zależności kompilacji)
+
+### nano_optymalization.sh
+Skrypt konfigurujący i optymalizujący edytor nano w systemie Linux.
+#### Funkcje:
+- Instaluje podświetlanie składni dla nano
+- Konfiguruje automatyczne wcięcia i numerowanie linii
+- Ustawia optymalny rozmiar tabulatora (4 spacje)
+- Aktywuje zawijanie długich linii
+- Włącza konwersję tabulatorów na spacje
+- Dodaje wszystkie dostępne definicje składni
 
 ## Łączenie się z WiFi
 
@@ -309,6 +319,23 @@ chmod +x installing_optymalization.sh
 3. Uruchom:
 ```bash
 sudo ./installing_optymalization.sh
+```
+
+## Optymalizacja nano
+
+1. Pobierz skrypt optymalizacyjny:
+```bash
+curl -O https://raw.githubusercontent.com/user/repo/main/nano_optymalization.sh
+```
+
+2. Nadaj uprawnienia:
+```bash
+chmod +x nano_optymalization.sh
+```
+
+3. Uruchom:
+```bash
+sudo ./nano_optymalization.sh
 ```
 
 ## Materiały pomocnicze
