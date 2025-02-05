@@ -247,3 +247,5 @@ sudo ./zsh_install.sh p10k.zsh
 [Jak zainstalować Arch Linux (freeCodeCamp)](https://www.freecodecamp.org/news/how-to-install-arch-linux/#how-to-set-the-console-keyboard-layout-and-font)
 
 [Jak zainstalować ZSH i powerlevel10k (davidtsadler)](https://davidtsadler.com/posts/arch/2020-09-07/installing-zsh-and-powerlevel10k-on-arch-linux/)
+
+[Jak zaisntalować OhMyZSH](https://ohmyz.sh/)
