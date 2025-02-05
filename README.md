@@ -7,6 +7,8 @@ Jest to przygotowana przeze mnie pełna instrukcja instalacji Arch Linux z użyc
 - [Łączenie się z WiFi](#łączenie-się-z-wifi)
 - [Instalacja systemu z pomocą archinstall.json](#instalacja-systemu-z-pomocą-archinstalljson)
 - [Instalacja yay](#instalacja-yay)
+- [Usuwanie niepotrzebnych pakietów](#usuwanie-niepotrzebnych-pakietów)
+- [Instalowanie ZSH, OhMyZSH, powerlevel10k i dodatków](#instalowanie-zsh-ohmyzsh-powerlevel10k-i-dodatków)
 - [Materiały pomocnicze](#materiały-pomocnicze)
 
 ## Opis skryptów
@@ -81,13 +83,11 @@ Jest to przygotowana przeze mnie pełna instrukcja instalacji Arch Linux z użyc
 Skrypt automatyzujący usuwanie domyślnych aplikacji GNOME z systemu Arch Linux.
 
 #### Funkcje bezpieczeństwa
-
 - Weryfikacja uprawnień roota
 - Sprawdzanie istnienia pakietów
 - Obsługa błędów usuwania
 
-### Usuwane pakiety
-
+#### Usuwane pakiety
 ```bash
 epiphany
 gnome-contacts
@@ -100,11 +100,33 @@ gnome-weather
 ```
 
 #### Cechy
-
 - Kolorowe komunikaty statusu (success, error, info)
 - Automatyczne usuwanie bez potwierdzenia (--noconfirm)
 - Usuwanie rekursywne z zależnościami (-Rns)
 - Weryfikacja pakietów przed usunięciem
+
+### zsh_install.sh
+
+Skrypt instalujący ZSH z Oh My Zsh, Powerlevel10k i przydatnymi wtyczkami.
+
+#### Instalowane komponenty
+
+##### Główne
+- **ZSH** - zaawansowana powłoka z wieloma funkcjami
+- **Oh My Zsh** - framework do zarządzania konfiguracją ZSH
+- **Powerlevel10k** - szybki i konfigurowalny motyw z bogatą personalizacją
+
+##### Wtyczki
+- **zsh-autosuggestions** - podpowiadanie komend na podstawie historii
+- **zsh-completions** - rozszerzone uzupełnianie dla wielu programów
+- **zsh-history-substring-search** - wyszukiwanie w historii przez PageUp/Down
+- **zsh-syntax-highlighting** - kolorowanie składni podczas pisania
+- **asdf** - uniwersalny menedżer wersji (Node.js, Python, Ruby itp.)
+- **fzf** - fuzzy finder - wyszukiwanie plików/historii
+- **extract** - rozpakowywanie archiwów jedną komendą
+- **dirhistory** - nawigacja katalogów Alt+lewo/prawo
+- **systemd** - zarządzanie usługami systemd
+- **z** - szybkie przechodzenie do często używanych katalogów
 
 ## Łączenie się z WiFi
 
@@ -186,6 +208,42 @@ chmod +x yay_install.sh
 sudo ./yay_install.sh
 ```
 
+## Usuwanie niepotrzebnych pakietów
+
+1. Pobierz skrypt:
+```bash
+curl -O https://raw.githubusercontent.com/mateusz-bogacz-collegiumwitelona/instrukcja_arch/main/remove.sh
+```
+
+2. Nadaj uprawnienia wykonywania:
+```bash
+chmod +x remove.sh
+```
+
+3. Uruchom jako root:
+```bash
+sudo ./remove.sh
+```
+
+## Instalowanie ZSH, OhMyZSH, powerlevel10k i dodatków
+1. Pobierz skrypt i plik konfiguracyjny:
+```bash
+curl -O https://raw.githubusercontent.com/mateusz-bogacz-collegiumwitelona/instrukcja_arch/main/zsh_install.sh
+curl -O https://raw.githubusercontent.com/mateusz-bogacz-collegiumwitelona/instrukcja_arch/main/p10k.zsh
+```
+
+2. Nadaj uprawnienia:
+```bash
+chmod +x zsh_install.sh
+```
+
+3. Uruchom jako root:
+```bash
+sudo ./zsh_install.sh p10k.zsh
+```
+
 ## Materiały pomocnicze
 
 [Jak zainstalować Arch Linux (freeCodeCamp)](https://www.freecodecamp.org/news/how-to-install-arch-linux/#how-to-set-the-console-keyboard-layout-and-font)
+
+[Jak zainstalować ZSH i powerlevel10k (davidtsadler)](https://davidtsadler.com/posts/arch/2020-09-07/installing-zsh-and-powerlevel10k-on-arch-linux/)
