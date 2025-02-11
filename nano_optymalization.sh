@@ -31,8 +31,7 @@ configure_nano() {
    print_msg "Konfigurowanie nano..."
    
    # Instalacja podświetlania składni
-   apt-get update
-   apt-get install -y nano-syntax-highlighting
+   pacman -S --noconfirm nano-syntax-highlighting
    
    # Tworzenie konfiguracji
    cat > ~/.nanorc << EOF
