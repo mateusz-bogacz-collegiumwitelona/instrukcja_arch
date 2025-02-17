@@ -1,0 +1,131 @@
+{
+    "__separator__": null,
+    "config_version": "2.8.6",
+    "additional-repositories": [
+        "multilib",
+        "testing"
+    ],
+    "archinstall-language": "Polish",
+    "audio_config": {"audio": "pipewire"},
+    "bootloader": "Grub",
+    "debug": false,
+    "disk_config": {
+        "config_type": "default_layout",
+        "device_modifications": [
+            {
+                "device": "/dev/sda",
+                "partitions": [
+                    {
+                        "btrfs": [],
+                        "flags": [
+                            "boot",
+                            "esp"
+                        ],
+                        "fs_type": "fat32",
+                        "size": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "GiB",
+                            "value": 1
+                        },
+                        "mount_options": [],
+                        "mountpoint": "/boot",
+                        "obj_id": "a87aef5b-186f-4373-842b-945fafcabaf9",
+                        "start": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "MiB",
+                            "value": 1
+                        },
+                        "status": "create",
+                        "type": "primary"
+                    },
+                    {
+                        "btrfs": [],
+                        "flags": [],
+                        "fs_type": "ext4",
+                        "size": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "B",
+                            "value": 511034351616
+                        },
+                        "mount_options": [],
+                        "mountpoint": "/",
+                        "obj_id": "10b26699-c7bd-4e67-b71a-fc5660b8ae7e",
+                        "start": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "B",
+                            "value": 1074790400
+                        },
+                        "status": "create",
+                        "type": "primary"
+                    }
+                ],
+                "wipe": true
+            }
+        ]
+    },
+    "hostname": "archlinux",
+    "kernels": [
+        "linux"
+    ],
+    "locale_config": {
+        "kb_layout": "pl",
+        "sys_enc": "UTF-8",
+        "sys_lang": "pl_PL.UTF-8"
+    },
+    "mirror_config": {
+        "mirror-regions": {
+            "Poland": [
+                "http://arch.midov.pl/arch/$repo/os/$arch",
+                "https://arch.midov.pl/arch/$repo/os/$arch",
+                "http://ftp.icm.edu.pl/pub/Linux/dist/archlinux/$repo/os/$arch",
+                "https://ftp.icm.edu.pl/pub/Linux/dist/archlinux/$repo/os/$arch"
+            ]
+        }
+    },
+    "network_config": {
+        "type": "nm"
+    },
+    "no_pkg_lookups": false,
+    "ntp": true,
+    "offline": false,
+    "packages": [
+        "git",
+        "htop",
+        "vlc", 
+        "geany",
+        "firefox",
+        "gparted",
+        "libreoffice-still",
+        "neofetch",
+        "curl",
+        "wget"
+    ],
+    "parallel downloads": 0,
+    "profile_config": {
+        "gfx_driver": "Intel (open-source)",
+        "greeter": "gdm",
+        "profile": {
+            "details": [
+                "Gnome"
+            ],
+            "main": "Desktop"
+        }
+    },
+    "script": "guided",
+    "silent": false,
+    "swap": false,
+    "timezone": "Europe/Warsaw",
+    "version": "2.8.6"
+}
